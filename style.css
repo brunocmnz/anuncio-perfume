@@ -1,0 +1,160 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*
+
+fraunces bold 32px alt32
+montserrat medium 14px alt23
+montserrat bold 14px alt-auto
+montserrat medium 12px alt-auto
+*/
+
+:root{
+    --cor-fundo: #e9dad8;
+    --cor-geral: #FFFFFF;
+    --cor-clara: #6C7289;
+    --cor-detalhe: #3D8168;
+    --cor-hover: #1A4032;
+
+    --fonte-principal: "Montserrat", sans-serif;;
+    --fonte-secundaria: "Fraunces", serif;
+}
+
+body{
+    background-color: var(--cor-fundo);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+    font-family: var(--fonte-principal);
+}
+
+.container{
+    width: 50rem; /* Ajuste conforme necessário */
+    height: 35rem; /* Ajuste conforme necessário */
+    border-radius: 15px; /* Aplicando border-radius à div principal */
+    overflow: hidden; /* Garante que o conteúdo interno respeite o border-radius */
+    display: flex; /* Opcional: para layout flexível interno */
+  }
+
+.info{
+    padding: 2rem;
+    background-color: var(--cor-geral);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.perfume{
+    font-weight: 500;
+    color: var(--cor-clara);
+    font-size: 12px;
+}
+
+.titulo{
+    font-family: var(--fonte-secundaria);
+    font-weight: 700;
+    font-size: 32px;
+    padding: 1.2rem 2rem 1.5rem 0;
+}
+
+.texto{
+    line-height: 23px;
+    color: var(--cor-clara);
+    font-weight: 500;
+}
+
+.preco{
+    display: flex;
+    gap: 1.1rem;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.valor-atual{
+    color: var(--cor-detalhe);
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 700;
+    font-family: var(--fonte-secundaria);
+}
+
+.valor-anterior{
+    color: var(--cor-clara);
+    font-size: 13px;
+    line-height: 23px;
+    text-decoration: line-through;
+    font-weight: 500;
+    color: var(--cor-clara);
+}
+
+.botao{
+    padding: 1em;
+    text-align: center;
+    display: block;
+    background-color: var(--cor-detalhe);
+    width: 90%;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--cor-geral);
+    font-weight: 700;
+    background-image: url(img/carrinho.svg);
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-position-x: 23%;
+}
+
+.botao:hover{
+    background-color: var(--cor-hover);
+}
