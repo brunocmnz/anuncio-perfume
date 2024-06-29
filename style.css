@@ -158,3 +158,16 @@ body{
 .botao:hover{
     background-color: var(--cor-hover);
 }
+
+@media screen and (max-width: 768px) {
+    body{
+        height: auto;
+        padding: 4rem 0;
+    }
+
+    .container{
+        flex-direction: column;
+        width: 80vw;
+        height: 100%;
+    }
+}
